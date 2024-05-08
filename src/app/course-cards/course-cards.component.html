@@ -1,0 +1,212 @@
+<div class="super_container">
+    <!-- <header class="header d-flex flex-row">
+        <div class="header_content d-flex flex-row align-items-center">
+            <div class="logo_container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="">
+                    <span>course</span>
+                </div>
+            </div>
+
+            <nav class="main_nav_container">
+                <div class="main_nav">
+                    <ul class="main_nav_list">
+                        <li class="main_nav_item"><a routerLink="/">home</a></li>
+                        <li class="main_nav_item"><a href="#">about us</a></li>
+                        <li class="main_nav_item"><a href="#">courses</a></li>
+                        <li class="main_nav_item"><a href="elements.html">elements</a></li>
+                        <li class="main_nav_item"><a href="news.html">news</a></li>
+                        <li class="main_nav_item"><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_side d-flex flex-row justify-content-center align-items-center">
+            <img src="assets/images/phone-call.svg" alt="">
+            <span>+43 4566 7788 2457</span>
+        </div>
+
+        <div class="hamburger_container">
+            <i class="fas fa-bars trans_200"></i>
+        </div>
+    </header> -->
+
+    <!-- <div class="menu_container menu_mm">
+        <div class="menu_close_container">
+            <div class="menu_close"></div>
+        </div>
+
+        <div class="menu_inner menu_mm">
+            <div class="menu menu_mm">
+                <ul class="menu_list menu_mm">
+                    <li class="menu_item menu_mm"><a routerLink="/">Home</a></li>
+                    <li class="menu_item menu_mm"><a href="#">About us</a></li>
+                    <li class="menu_item menu_mm"><a href="#">Courses</a></li>
+                    <li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
+                    <li class="menu_item menu_mm"><a href="news.html">News</a></li>
+                    <li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="menu_social_container menu_mm">
+                    <ul class="menu_social menu_mm">
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
+            </div>
+        </div> 
+    </div> -->
+<app-header></app-header>
+    <div class="home">
+        <div class="home_background_container prlx_parent">
+            <div class="home_background prlx" [style.background-image]="'url(assets/images/courses_background.jpg)'">
+            </div>
+        </div>
+        <div class="home_content">
+            <h1>Courses</h1>
+        </div>
+    </div>
+
+
+
+    <div class="popular page_section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <h1>Popular Courses</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row course_boxes">
+            </div>
+        </div>
+    </div>
+
+    <div class="row course_boxes ">
+
+        <div *ngFor="let course of dataSource" class="col-lg-4 course_box">
+            <div class="card">
+                <div class="image-container">
+                    <img [src]="'data:image/jpeg;base64,' + course.imageData" alt="imgSrc" class="w-100"
+                        mat-card-image />
+                        <div class="details-text" (click)="showCourseDetails(course)">Details</div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="card-title">
+                        <a [routerLink]="['/document', course.courseID]">{{ course.title }}</a>
+                    </div>
+                </div>
+                <div class="price_box d-flex flex-row align-items-center">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H256V416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V208zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V336zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H336V144c0-8.8-7.2-16-16-16z"/></svg> -->
+                    <div class="course_author_name">{{ course.courseType }} <span>{{ course.duration }}H</span></div>
+                    <div class="course_price d-flex flex-column align-items-center justify-content-center">
+                        <span>{{ course.disponibility }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title text-center">
+                            <h1>Subscribe to newsletter</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="newsletter_form_container mx-auto">
+                            <form action="https://themewagon.github.io/course/post">
+                                <div
+                                    class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+                                    <input id="newsletter_email" class="newsletter_email" type="email"
+                                        placeholder="Email Address" required="required"
+                                        data-error="Valid email is required.">
+                                    <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300"
+                                        value="Submit">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_content">
+                <div class="row">
+                    <div class="col-lg-3 footer_col">
+                        <div class="logo_container">
+                            <div class="logo">
+                                <img src="assets/images/logo.png" alt="">
+                                <span>course</span>
+                            </div>
+                        </div>
+                        <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla,
+                            vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor
+                            lacus.</p>
+                    </div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">Menu</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a routerLink="/">Home</a></li>
+                                <li class="footer_list_item"><a href="#">About Us</a></li>
+                                <li class="footer_list_item"><a href="#">Courses</a></li>
+                                <li class="footer_list_item"><a href="news.html">News</a></li>
+                                <li class="footer_list_item"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">Useful Links</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a href="#">Testimonials</a></li>
+                                <li class="footer_list_item"><a href="#">FAQ</a></li>
+                                <li class="footer_list_item"><a href="#">Community</a></li>
+                                <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">Contact</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="assets/images/placeholder.svg"
+                                            alt="https://www.flaticon.com/authors/lucy-g">
+                                    </div>
+                                    1481 Creekside Lane Avila Beach, CA 93424
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="assets/images/phone-call.svg"
+                                            alt="https://www.flaticon.com/authors/lucy-g">
+                                    </div>
+                                    +53 345 7953 32453
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="assets/images/message.svg"
+                                            alt="https://www.flaticon.com/authors/lucy-g">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

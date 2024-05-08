@@ -1,0 +1,132 @@
+
+<!-- Popular -->
+
+<div class="super_container">
+  <!-- Header -->
+
+
+    <div class="header_content d-flex flex-row align-items-center">
+      <!-- Logo -->
+
+      </div>
+
+      <!-- Main Navigation -->
+     <app-header></app-header>
+    </div>
+
+
+    <!-- Hamburger -->
+    <div class="hamburger_container">
+      <i class="fas fa-bars trans_200"></i>
+    </div>
+
+
+
+  <!-- Menu -->
+
+
+
+
+  <!-- Home -->
+
+  <div class="home">
+
+    <!-- Hero Slider -->
+    <div class="hero_slider_container">
+      <div class="hero_slider owl-carousel">
+
+        <!-- Hero Slide -->
+
+
+
+        </div>
+
+        <!-- Hero Slide -->
+        <div class="hero_slide">
+          <div class="hero_slide_background" style="background-image:url(assets/images/slider_background.jpg)"></div>
+          <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+            <div class="hero_slide_content text-center">
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+  <div class="hero_boxes">
+    <div class="hero_boxes_inner">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 hero_box_col">
+            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+              <img src="assets/images/earth-globe.svg" class="svg" alt="">
+              <div class="hero_box_content">
+                <h2 class="hero_box_title">Competitions</h2>
+                <a href="courses.html" class="hero_box_link">view more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 hero_box_col">
+            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+              <img src="assets/images/books.svg" class="svg" alt="">
+              <div class="hero_box_content">
+                <h2 class="hero_box_title">Badges</h2>
+                <!-- Utilisez onclick pour appeler la fonction navigatetobadges lors du clic -->
+                <a href="" class="hero_box_link" (click)="navigatetobadge()">view more</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 hero_box_col">
+            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+              <img src="assets/images/professor.svg" class="svg" alt="">
+              <div class="hero_box_content">
+                <h2 class="hero_box_title">Prizes</h2>
+                <a href="teachers.html" class="hero_box_link">view more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Competitions Section -->
+  <div class="popular page_section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="section_title text-center">
+            <h1>Popular Competitions</h1>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Types Display -->
+      <div class="row justify-content-center"> <!-- Centering the row -->
+        <div class="col-lg-4" *ngFor="let type of enumValues" (click)="selectType(type)">
+          <div class="properties properties2 mb-30">
+            <div class="properties__img overlay1">
+              <img [src]="getImageUrl(type)" alt="{{ type }}">
+            </div>
+            <div class="properties__caption">
+              <h3>{{ type }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

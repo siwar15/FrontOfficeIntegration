@@ -1,0 +1,17 @@
+/* Effet 3D */
+.type_image_3d {
+  transition: transform 0.3s ease-in-out;
+}
+
+.type_caption_3d {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ajout de l'effet 3D lors du survol */
+.type_image_3d:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+}
+
+.type_caption_3d:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+}

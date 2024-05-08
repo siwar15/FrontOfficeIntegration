@@ -1,0 +1,221 @@
+/* Style de base pour toutes les compétitions */
+.single-services {
+  background-color: #fff; /* Couleur de fond par défaut */
+  transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
+}
+
+/* Style de survol pour les compétitions en ligne */
+.single-services.online-competition:hover {
+  background-color: lightblue; /* Couleur de fond au survol */
+}
+.competition-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.competition-card:hover {
+  cursor: pointer;
+}
+
+.competition-card.online-competition:hover {
+  background-color: #d4edda; /* Vert */
+}
+
+.competition-card.disabled {
+  pointer-events: none; /* Rend le lien non cliquable */
+  opacity: 0.5; /* Rend le texte plus clair pour indiquer qu'il est désactivé */
+}
+/* Style pour la fenêtre modale */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.offline_message {
+   color: red; /* Couleur du texte en rouge */
+ }
+.btn-submit {
+  background-color: #FEAC11; /* Couleur de fond jaune */
+  color: #fff; /* Couleur du texte en blanc */
+}
+
+/* Style pour mettre en surbrillance le bouton lors du survol */
+.btn-submit:hover {
+  background-color: #ffcd38; /* Couleur de fond jaune plus claire au survol */
+}
+.already_inscribed {
+  position: absolute; /* Position absolue par rapport à son conteneur parent */
+  top: 0; /* Position en haut */
+  right: 0; /* Position à droite */
+  background-color: #FEAC11; /* Couleur de fond rouge */
+  color: #fff; /* Couleur du texte en blanc */
+  padding: 5px 10px; /* Ajout de marge intérieure pour le texte */
+  border-radius: 5px; /* Ajout de coins arrondis */
+}
+.already_offline {
+  position: absolute; /* Position absolue par rapport à son conteneur parent */
+  top: 0; /* Position en haut */
+  right: 0; /* Position à droite */
+  background-color: #C4C1BC; /* Couleur de fond rouge */
+  color: #fff; /* Couleur du texte en blanc */
+  padding: 5px 10px; /* Ajout de marge intérieure pour le texte */
+  border-radius: 5px; /* Ajout de coins arrondis */
+}
+
+/* CSS pour le conteneur parent du message */
+.text-center {
+  text-align: center; /* Alignement du texte au centre */
+  margin-top: 10px; /* Marge supérieure pour espacement */
+}
+.notification {
+  position: fixed;
+  bottom: 20px; /* Ajuster la distance par rapport au bas de la page */
+  right: 20px; /* Ajuster la distance par rapport à la droite de la page */
+  background-color: #f8f9fa; /* Couleur de fond */
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.yes-button {
+  background-color: #ddd; /* Couleur de base */
+  color: #333; /* Couleur du texte */
+}
+
+.no-button {
+  background-color: #ddd; /* Couleur de base */
+  color: #333; /* Couleur du texte */
+}
+
+.yes-button:hover,
+.no-button:hover {
+  background-color: #bbb; /* Couleur foncée au survol */
+}
+.notification {
+  background-color: #ffffff; /* Fond blanc */
+  border: 2px solid #ffcc00; /* Cadre jaune */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  max-width: 400px; /* Largeur maximale */
+  margin: 20px auto; /* Centré horizontalement */
+  color: #000000; /* Texte noir */
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message {
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 10px; /* Espacement bas */
+}
+
+.question {
+  margin-bottom: 10px; /* Espacement bas */
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.send-button,
+.cancel-button {
+  padding: 10px 20px; /* Espacement interne */
+  margin: 0 10px; /* Marge entre les boutons */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer */
+  font-size: 14px; /* Taille de police */
+  transition: background-color 0.3s; /* Transition de couleur fluide */
+}
+
+.send-button {
+  background-color: #ffcc00; /* Fond jaune pour le bouton "Send" */
+  color: #ffffff; /* Texte blanc */
+}
+
+.cancel-button {
+  background-color: #808080; /* Fond gris pour le bouton "Cancel" */
+  color: #ffffff; /* Texte blanc */
+}
+
+.send-button:hover,
+.cancel-button:hover {
+  background-color: #bfbfbf; /* Fond gris plus clair au survol */
+}
+
+.send-button:focus,
+.cancel-button:focus {
+  outline: none; /* Pas de contour de focus */
+}
+
+.additional-content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Espacement supplémentaire en haut */
+}
+
+label {
+  display: block; /* Affichage en bloc pour une meilleure mise en forme */
+  margin-right: 10px; /* Espacement à droite */
+}
+
+.email-input {
+  border: 2px solid #808080; /* Bordure gris pour l'input */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 8px; /* Espacement interne */
+  font-size: 14px; /* Taille de police */
+}
+
+.email-input:focus {
+  outline: none; /* Suppression du contour de focus par défaut */
+  border-color: #bfbfbf; /* Couleur de la bordure au focus */
+}
+

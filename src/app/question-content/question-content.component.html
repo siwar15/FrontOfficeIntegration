@@ -1,0 +1,32 @@
+
+
+        <div class="card">
+
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
+                 Questions
+                </button>
+            </div>
+            </div>
+
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let q of questions, let i = index">
+            <mat-expansion-panel-header (click)="findResponse(q.id)">
+              <mat-panel-title>
+                {{i+1}}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{q.question}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div>
+              <p style="color: red">{{q?.response1}}</p>
+              <p style="color: red">{{q?.response2}}</p>
+              <p style="color: red">{{q?.response3}}</p>
+              <p *ngIf="q.correct==q?.response1" style="color: olivedrab">Correct réponse:  {{q?.response1}}</p>
+              <p *ngIf="q.correct==q?.response2" style="color: olivedrab">Correct réponse:  {{q?.response2}}</p>
+              <p *ngIf="q.correct==q?.response3" style="color: olivedrab">Correct réponse:  {{q?.response3}}</p>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
