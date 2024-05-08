@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<br><br><br><br>
+
+<section class="container">
+  <!-- Liste des amis -->
+  <ul class="task-items">
+    <!-- Liste des amis -->
+    <li *ngFor="let friend of friends" class="item">
+      <div class="task">
+        <div class="name">{{ friend.firstName }} {{ friend.lastName }}</div>
+      </div>
+
+      <div class="status">
+        <div class="text">{{ friend.emailAddress }}</div>
+      </div>
+
+
+
+      <div class="user">
+        <img src="https://source.unsplash.com/40x40/?face" alt="User Image" class="owner-img" />
+      </div>
+    </li>
+  </ul>
+</section>

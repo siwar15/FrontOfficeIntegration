@@ -1,0 +1,62 @@
+.task-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.task {
+  flex: 1;
+  padding: 20px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.status {
+  padding: 20px;
+  border-left: 2px solid #4caf50; /* Change the color as needed */
+}
+
+.text {
+  font-size: 16px;
+}
+
+.progress {
+  padding: 20px;
+  flex: 1;
+}
+
+.dates,
+.priority {
+  flex: 1;
+  padding: 20px;
+}
+
+.bar {
+  background-color: #f48fb1; /* Change the color as needed */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.user {
+  padding: 20px;
+}
+
+.owner-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

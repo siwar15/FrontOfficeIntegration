@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container">
+  <h1 class="title">Your Prizes</h1>
+  <div class="prizes-list" *ngIf="prizes.length > 0">
+    <div *ngFor="let prize of prizes" class="prize-item">
+      <div class="prize-badge">
+        <h2>{{ prize.name }}</h2>
+        <p>{{ prize.description }}</p>
+        <p class="value">Value: {{ prize.value }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="prizes.length === 0" class="no-prizes">
+    <p>No prizes found for this user.</p>
+  </div>
+</div>

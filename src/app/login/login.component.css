@@ -1,0 +1,21 @@
+.card {
+  max-width: 540px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the card if it's width is less than its container's width */
+}
+
+/* Change the color of the "Sign in" button */
+button[type="submit"] {
+  background-color: #ffb606; /* Change the background color */
+  color: black; /* Change the text color */
+  border-color: #ffb606; /* Change the border color */
+}
+
+/* Change the color of the "Forgot your password?" link */
+a[href="forget-password.html"] {
+  color: #ffb606;
+}
+
+/* Change the color of the "Sign up" link */
+a[href="sign-up.html"] {
+  color: #ffb606;
+}

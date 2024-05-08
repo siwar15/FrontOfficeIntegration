@@ -1,0 +1,167 @@
+<!-- <br><br>
+<app-header></app-header>
+<br><br><br><br>
+<div class="container">
+  <div class="card">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Difficulte</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Total Time</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let h of histories">
+          <tr>
+            <td>{{h.username}}</td>
+            <td>{{h.levelName}}</td>
+            <td>{{h.themeName}}</td>
+            <td>{{h.total}}</td>
+            <td>{{h.sore}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+<div>
+    <button class="btn btn-primary" [routerLink]="['/theme']"
+    style="background: #3a9efd; margin-top: 15px; border-color: #3a9efd;">Start a quizz</button>
+</div>
+</div>
+-->
+ <br><br>
+<app-header></app-header>
+<br><br><br><br>
+<section class="container">
+
+  <!-- Header Bar -->
+  <header>
+    <div class="button-col">
+      <button class="btn" name="Add Task" [routerLink]="['/theme/']"> Play ? </button>
+    </div>
+
+    <div class="status-col">
+      <label> Rate </label>
+    </div>
+
+    <div class="progress-col">
+      <label> Percentage </label>
+    </div>
+
+    <div class="dates-col">
+      <label> Level </label>
+    </div>
+
+    <div class="priority-col">
+      <label> Score </label>
+    </div>
+
+    <div class="icon-col">
+      <i class="icon fa fa-user-o"> </i>
+    </div>
+
+  </header>
+
+  <!-- List Items -->
+  <ul  class="task-items">
+
+    <!-- List Item -->
+    <div *ngIf="histories">
+    <li *ngFor="let h of histories | paginate: { itemsPerPage: pageSize, currentPage: currentPage }" [hidden]="h.sore>2" class="item type1">
+      <div class="task">
+     <img class="icon" ngSrc="./assets/quiz.png" width="128" height="128" alt="">
+
+        <div class="name" style="width:150px" > {{h.themeName}} </div>
+      </div>
+
+      <div class="status">
+        <div class="icon off"> </div>
+        <div class="text"> Off Track </div>
+      </div>
+
+      <div class="progress" >
+        <progress value="{{h.sore}}" max="10"></progress>
+      </div>
+
+      <div class="dates">
+        <div class="bar">{{h.levelName}} </div>
+      </div>
+
+      <div class="priority" >
+        <div class="bar" > {{h.sore}}</div>
+      </div>
+
+      <div class="user">
+        <img src="https://source.unsplash.com/40x40/?indian" alt="Image 001" class="owner-img" />
+      </div>
+    </li>
+    </div>
+<div *ngIf="histories">
+    <li *ngFor="let h of histories | paginate: { itemsPerPage: pageSize, currentPage: currentPage }" [hidden]="h.sore > 5 || h.sore<3" class="item type4" >
+      <div class="task">
+        <img class="icon" ngSrc="./assets/quiz.png" width="128" height="128" alt="">
+        <div class="name" style="width:120px"> {{h.themeName}}</div>
+      </div>
+
+      <div  class="status">
+        <div class="icon warning"> </div>
+        <div class="text"> At Risk </div>
+      </div>
+
+      <div class="progress">
+        <progress value="{{h.sore}}" max="10"></progress>
+      </div>
+
+      <div class="dates">
+        <div class="bar"> {{h.levelName}}</div>
+      </div>
+
+      <div class="priority">
+        <div class="bar"> {{h.sore}}</div>
+      </div>
+
+      <div class="user">
+        <img src="https://source.unsplash.com/40x40/?face" alt="Image 001" class="owner-img" />
+      </div>
+
+    </li>
+</div>
+
+    <div *ngIf="histories">
+    <li *ngFor="let h of histories | paginate: { itemsPerPage: pageSize, currentPage: currentPage }"  [hidden]="h.sore<7" class="item type2">
+      <div class="task">
+        <div class="icon"> </div>
+        <div class="name" style="width:100px"> </div>
+      </div>
+
+      <div class="status">
+        <div class="icon"> </div>
+        <div class="text"> On Track </div>
+      </div>
+
+      <div class="progress">
+        <progress value="{{h.sore}}" max="10"></progress>
+      </div>
+
+      <div class="dates">
+        <div class="bar"> {{h.levelName}} </div>
+      </div>
+
+      <div class="priority">
+        <div class="bar">{{h.sore}} </div>
+      </div>
+
+      <div class="user">
+        <img src="https://source.unsplash.com/40x40/?asian" alt="Image 001" class="owner-img" />
+      </div>
+    </li>
+    </div>
+
+  </ul>
+
+<div style="right: -300px;bottom: -30px" >
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>
+</section>

@@ -1,0 +1,66 @@
+
+.password-toggle-icon {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -30px; /* Adjust this value to move the icon up or down */
+  right: -510px; /* Adjust this value to move the icon left or right */
+}
+.error input {
+  border-color: red;
+}
+.card {
+  max-width: 540px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the card if it's width is less than its container's width */
+}
+
+/* Change the color of the "Sign in" button */
+button[type="submit"] {
+  background-color: #ffb606; /* Change the background color */
+  color: black; /* Change the text color */
+  border-color: #ffb606; /* Change the border color */
+}
+
+/* Change the color of the "Forgot your password?" link */
+a[href="forget-password.html"] {
+  color: #ffb606;
+}
+
+/* Change the color of the "Sign up" link */
+a[href="sign-up.html"] {
+  color: #ffb606;
+}
+/* Success message panel */
+.success-message-panel {
+  background-color: #d4edda; /* Green background */
+  color: #155724; /* Dark green text color */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px; /* Add margin at the bottom to separate from other elements */
+}
+
+.success-icon {
+  font-size: 24px; /* Adjust as needed */
+  margin-right: 10px; /* Space between icon and message */
+}
+
+/* Form styling */
+.container input[type="text"] {
+  /* Add your custom styles for text inputs */
+}
+
+.container button {
+  /* Add your custom styles for buttons */
+}
+
+/* Social media sign-in buttons */
+.container .btn-outline-primary {
+  border-color: #007bff; /* Blue border color */
+  color: #007bff; /* Blue text color */
+}
+
+.container .btn-outline-primary:hover {
+  background-color: #007bff; /* Blue background color on hover */
+  color: #fff; /* White text color on hover */
+}

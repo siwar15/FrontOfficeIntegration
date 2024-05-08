@@ -1,0 +1,277 @@
+/* Badge Container */
+.badge-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet aux badges de passer à la ligne si nécessaire */
+}
+
+/* Badge Item */
+.badge-item {
+  margin: 10px;
+  padding: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.badge-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Badge Image */
+.badge-item img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+/* Notification Bell */
+.notification-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.notification-bell {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* Ajoutez ceci à votre feuille de style CSS */
+
+/* Container des félicitations */
+.congratulation-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;
+}
+
+/* Texte de félicitations */
+.congratulation-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #FFD700; /* Couleur dorée */
+}
+
+/* Ballons */
+.balloons-container {
+  margin-top: 20px;
+}
+
+.balloon {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  background-color: #FFD700; /* Couleur dorée */
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+  animation: balloonAnimation 3s ease-in-out infinite;
+}
+/* Ajoutez ceci à votre feuille de style CSS */
+
+/* Container des félicitations */
+.congratulation-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Ballon */
+.balloon {
+  width: 200px; /* Largeur du ballon */
+  height: 250px; /* Hauteur du ballon */
+  background-color: #fff; /* Couleur de fond du ballon */
+  border-radius: 50%; /* Forme de ballon */
+  position: relative;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texte de félicitations */
+.congratulation-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700; /* Couleur dorée */
+}
+/* Ajoutez ceci à votre feuille de style CSS */
+
+/* Container des badges */
+.badge-list {
+  display: flex; /* Utilisation de flexbox */
+  flex-wrap: wrap; /* Permettre le passage à la ligne des badges si nécessaire */
+  justify-content: center; /* Centrer les badges horizontalement */
+}
+
+/* Style des badges */
+/* Style des badges */
+.badge-item {
+  margin: 10px; /* Marge entre les badges */
+  padding: 20px; /* Ajuster le rembourrage pour agrandir le cadre */
+}
+
+/* Style des images des badges */
+.badge-item img {
+  width: 1000px; /* Largeur des badges */
+  height: auto; /* Hauteur automatique pour maintenir les proportions */
+}
+@keyframes balloon-animation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.balloon {
+  animation: balloon-animation 2s ease-in-out infinite;
+
+}
+.notification-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.notification {
+  background-color: #f8d7da; /* Couleur de fond */
+  border: #1ABFC7;
+; /* Bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement intérieur */
+  max-width: 400px; /* Largeur maximale */
+  text-align: center; /* Centrer le texte */
+}
+
+.notification h2 {
+  color: #dc3545; /* Couleur du titre */
+  margin-top: 0; /* Supprimer la marge supérieure */
+}
+
+.notification p {
+  color: #343a40; /* Couleur du texte */
+  margin-bottom: 0; /* Supprimer la marge inférieure */
+}
+.notification-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.notification {
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.notification h2 {
+  color: #dc3545;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.notification p {
+  color: #343a40;
+  margin-bottom: 0;
+}
+
+.balloon-container {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balloon {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+.left {
+  left: -30px;
+  transform: rotate(-15deg);
+}
+
+.right {
+  right: -30px;
+  transform: rotate(15deg);
+}
+.notification.success {
+  color: white;
+  border: 2px solid red;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.1); /* Rouge très léger pour l'arrière-plan */
+}
+
+.notification.success h2 {
+  margin-top: 0; /* Pour enlever tout espace supplémentaire au-dessus de l'en-tête */
+}
+
+.notification.success p {
+  margin-bottom: 0; /* Pour enlever tout espace supplémentaire en dessous du paragraphe */
+}
+.notification.success {
+  color: black; /* Couleur du texte */
+  border: 2px solid yellow; /* Bordure jaune */
+  padding: 10px; /* Espace intérieur */
+  background-color: white; /* Fond blanc */
+}
+.notification-container {
+  position: fixed; /* Position fixe pour rester visible lors du défilement */
+  top: 50%; /* Positionnement au centre vertical */
+  left: 50%; /* Positionnement au centre horizontal */
+  transform: translate(-50%, -50%); /* Déplacer la boîte de notification de moitié de sa propre taille pour la centrer */
+  z-index: 999; /* Assure que la notification apparaît au-dessus du contenu */
+}
+
+.notification {
+  position: relative; /* Position relative pour le positionnement absolu de l'icône de fermeture */
+  color: black; /* Couleur du texte */
+  border: 2px solid yellow; /* Bordure jaune */
+  padding: 10px; /* Espace intérieur */
+  background-color: white; /* Fond blanc */
+}
+
+.notification.success h2 {
+  margin-top: 0; /* Supprimer l'espace supplémentaire au-dessus de l'en-tête */
+}
+
+.notification.success p {
+  margin-bottom: 0; /* Supprimer l'espace supplémentaire en dessous du paragraphe */
+}
+
+.close-icon {
+  position: absolute; /* Position absolue pour l'icône de fermeture */
+  top: 0; /* Positionnement au haut de la notification */
+  right: 0; /* Positionnement à droite de la notification */
+  padding: 5px; /* Espace intérieur pour la visibilité de l'icône */
+  cursor: pointer; /* Curseur de la souris indiquant que l'icône est cliquable */
+}
+.badge {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Augmentation du rayon de la bordure pour arrondir les coins */
+  margin: 1000px;
+  padding: 30px; /* Ajustement de l'espace à l'intérieur du badge */
+  width: 250px; /* Augmentation de la largeur du badge */
+  height: 250px; /* Augmentation de la hauteur du badge */
+  text-align: center;
+}
+
+

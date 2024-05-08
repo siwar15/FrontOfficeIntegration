@@ -1,0 +1,59 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  color: #333;
+  text-align: center;
+  margin-top: 0;
+}
+
+.prizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prize-item {
+  margin: 10px;
+}
+
+.prize-badge {
+  background-color: #FFF;
+  border: 2px solid #F1BE20; /* Jaune F1BE20 */
+  border-radius: 10px;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ribbon {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 120px;
+  height: 120px;
+  background-color: #F1BE20; /* Jaune F1BE20 */
+  text-align: center;
+  line-height: 120px;
+  transform: rotate(-45deg);
+}
+
+.ribbon span {
+  color: #FFF;
+  font-size: 16px;
+  transform: rotate(45deg);
+}
+
+.prize-content {
+  padding: 20px;
+}
+
+.prize-content h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.prize-cont

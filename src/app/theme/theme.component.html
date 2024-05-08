@@ -1,0 +1,41 @@
+<br><br>
+<app-header></app-header>
+<br><br><br><br>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+
+<body>
+
+<div *ngIf="themes" class="container">
+  <div *ngFor="let t of themes | paginate: { itemsPerPage: pageSize, currentPage: currentPage } ; let i= index " class="card">
+    <h3 class="title">{{t.name}}</h3>
+    <div class="fw-bolder" style="bottom: -75px;left: 25px">
+    <a  [href]="['/quizz/', t.id]" style="color: #000000"> GO !</a>
+    </div>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+
+    </div>
+    <div class="circle">
+      <div  class="img-wrapper">
+
+        <img ngSrc='./assets/image{{startIndex + i + 1}}.png' alt='' height="128" width="128"  >
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+<div #buttons style="right: -490px;top: -300px;color: #ffb606" >
+
+    <div  class="button active"></div>
+    <div class="button"></div>
+    <div>
+     <pagination-controls   (click)="switchToNext($event)" (pageChange)="onPageChange($event)"></pagination-controls></div>
+
+
+
+</div>
+
